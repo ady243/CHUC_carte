@@ -9,7 +9,7 @@
 .carte-fond{position:absolute;inset:0;width:100%;height:100%;display:block}
 /* Bloc nom + fonction : ancré en bas, au-dessus du badge ID */
 .carte-texte{position:absolute;left:9%;bottom:21.8%;width:35.6%;max-height:36%;display:flex;flex-direction:column;justify-content:flex-end}
-.carte-nom{font-weight:700;font-size:4.4cqw;line-height:.9;text-transform:uppercase;letter-spacing:-.01em}
+.carte-nom{color:#000;font-weight:700;font-size:4.4cqw;line-height:.9;text-transform:uppercase;letter-spacing:-.01em}
 .carte-nom span{display:block;white-space:nowrap}
 .carte-fonction{font-weight:400;font-size:3.9cqw;line-height:1.05;margin-top:.55em}
 /* Badge rouge ID */
