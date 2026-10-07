@@ -1,0 +1,26 @@
+/* Carte de service CHU50 – modèle paysage.
+   Toutes les positions sont en % de l'image modèle (2411 x 1560),
+   les tailles de texte en cqw (% de la largeur de la carte). */
+@font-face{font-family:Montserrat;font-weight:400;src:url(../fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-weight:700;src:url(../fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-weight:400;src:url(../fonts/montserrat-latin-ext-400-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+@font-face{font-family:Montserrat;font-weight:700;src:url(../fonts/montserrat-latin-ext-700-normal.woff2) format('woff2');unicode-range:U+0100-024F}
+.carte{--bleu:#275285;--rouge:#e30613;position:relative;width:100%;aspect-ratio:2411/1560;container-type:inline-size;overflow:hidden;background:#fff;font-family:Montserrat,Arial,sans-serif;color:var(--bleu);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.carte-fond{position:absolute;inset:0;width:100%;height:100%;display:block}
+/* Bloc nom + fonction : ancré en bas, au-dessus du badge ID */
+.carte-texte{position:absolute;left:9%;bottom:21.8%;width:35.6%;max-height:36%;display:flex;flex-direction:column;justify-content:flex-end}
+.carte-nom{font-weight:700;font-size:4.4cqw;line-height:.9;text-transform:uppercase;letter-spacing:-.01em}
+.carte-nom span{display:block;white-space:nowrap}
+.carte-fonction{font-weight:400;font-size:3.9cqw;line-height:1.05;margin-top:.55em}
+/* Badge rouge ID */
+.carte-id{position:absolute;left:9%;top:81.9%;width:28.5%;height:9.8%;background:var(--rouge);border-radius:999px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:4.2cqw;white-space:nowrap}
+.carte-id>span{display:block}
+/* QR code */
+.carte-qr{position:absolute;left:44.7%;top:67.3%;width:16cqw;height:16cqw}
+.carte-qr svg{display:block;width:100%;height:100%}
+/* Photo de l'agent */
+.carte-photo{position:absolute;left:64.75%;top:45.05%;width:26.35%;height:46.7%;border-radius:2.2cqw;overflow:hidden;background:#e8edf4}
+.carte-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.carte-photo>span{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:2.4cqw;font-weight:700;color:#8a9bb3}
+.carte-photo.sans-photo img{display:none}.carte-photo.sans-photo>span{display:flex}
+.carte .vide{opacity:.3}

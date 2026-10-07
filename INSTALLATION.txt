@@ -1,0 +1,20 @@
+INSTALLATION RAPIDE
+===================
+
+WINDOWS (XAMPP, PHP 8.1 minimum)
+1. Installer XAMPP, démarrer Apache + MySQL.
+2. Extraire le dossier dans C:\xampp\htdocs\chu50-cartes\
+3. Aller à http://localhost/phpmyadmin/ > Importer > database/chu50_cartes.sql
+4. Ouvrir http://localhost/chu50-cartes/
+5. Créer une carte test : saisir les informations, importer une photo, imprimer.
+
+MAC (Homebrew)
+  brew install php mysql
+  brew services start mysql
+  cd chemin/vers/chu50-cartes
+  mysql -u root < database/chu50_cartes.sql
+  php -S localhost:8000
+Puis ouvrir http://localhost:8000
+
+Mot de passe MySQL différent : modifier DB_USER / DB_PASS dans config/config.php.
+Mise à jour depuis l'ancienne version : voir CHANGEMENTS.txt, section 4.
